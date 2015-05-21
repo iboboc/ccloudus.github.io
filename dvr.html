@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>cCloud TV BETA V0.2.5</title>
+<link rel="icon"type="image/png"href="http://i.imgur.com/yX8CKx3.png">
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+<link rel="stylesheet" href="/stuff/style/clouddvrtest2.css" media="screen" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<script src="/stuff/script/cloud.js"></script>
+<script src="/stuff/script/cloud2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+ <div class="table-title">
+
+<img style="width: 600px; height: 270px; border: 0;" src=" http://s22.postimg.org/vevchkm35/10517573_1480335178872658_3980340328107019530_n.png" />
+
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">Channels</th>
+<th class="text-left"><input type='search' id='search' placeholder='Search' autofocus>
+</th>
+</tr>
+</thead>
+ 
+<table class="list" >
+  <tbody  class="table-hover">
+   <tr>
+<td class="text-center"><a href="/dvr">00</td>
+<td class="text-left"><a href="/dvr">Guide</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/01">01</td>
+<td class="text-left"><a  href="/ch/desi/01">Zee TV</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/02">02</td>
+<td class="text-left"><a  href="/ch/desi/02">Star Plus</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/03">03</td>
+<td class="text-left"><a  href="/ch/desi/03">Sony</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/04">04</td>
+<td class="text-left"><a  href="/ch/desi/04">Colors</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/05">05</td>
+<td class="text-left"><a  href="/ch/desi/05">Door Durshan</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/06">06</td>
+<td class="text-left"><a  href="/ch/desi/06">Colors</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/07">07</td>
+<td class="text-left"><a  href="/ch/desi/07">Star Plus</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/08">08</td>
+<td class="text-left"><a  href="/ch/desi/08">Sony</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/09">09</td>
+<td class="text-left"><a  href="/ch/desi/09">Zee Smile</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/10">10</td>
+<td class="text-left"><a  href="/ch/desi/10">Zee Smile</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/11">11</td>
+<td class="text-left"><a  href="/ch/desi/11">Zee TV</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/12">12</td>
+<td class="text-left"><a  href="/ch/desi/12">Zee News</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/13">13</td>
+<td class="text-left"><a  href="/ch/desi/13">Zee Action</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/14">14</td>
+<td class="text-left"><a  href="/ch/desi/14">Zee Classic</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/15">15</td>
+<td class="text-left"><a  href="/ch/desi/15">ZEE Smile</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/16">16</td>
+<td class="text-left"><a  href="/ch/desi/16">Zee Premiere</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/17">17</td>
+<td class="text-left"><a  href="/ch/desi/17">SONY TV</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/18">18</td>
+<td class="text-left"><a  href="/ch/desi/18">SET MAX</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/19">19</td>
+<td class="text-left"><a  href="/ch/desi/19">MH One HD</td>
+</tr>
+<tr>
+<td class="text-center"><a  href="/ch/desi/20">20</td>
+<td class="text-left"><a  href="/ch/desi/20">DD Punjabi</td>
+</tr>
+
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<script>
+var $rows = $('.list tr');
+$('#search').keyup(function() {
+  var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+  $rows.show().filter(function() {
+    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+    return !~text.indexOf(val);
+  }).hide();
+});	
+</script>
+
+
+  </body>
+  </html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>cCloud TV BETA V0.2.5</title>
+<link rel="icon"type="image/png"href="http://i.imgur.com/yX8CKx3.png">
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+<link rel="stylesheet" href="home/tv.css">
+<link rel="stylesheet" href="home/alert.css">
+<script src="home/page.js"></script>
+</head>
+
+<body>
+
+  <html>
+<body>
+   <header>
+      <h1>cCloud TV...</h1>
+      <p>Please select your device type thank you:)</a></p>
+   </header>
+
+   <div id="buttons">
+     <form  action="/ch/f/tv">
+         <button class="btn1">Desktop FLASH OTA BETA</button> 
+</form>
+<form  action="/ch/v/tv">
+         <button class="btn2">Desktop VLC</button> 
+</form>
+<form  action="/ch/c/tv">
+         <button class="btn4">Custom VLC</button> 
+</form>
+     <form  action="/ch/m/tv">
+      <button class="btn20">Smartphone</button>
+</form>
+</form>
+     <form  action="/ch/m/tv">
+      <button class="btn21">Tablet</button>
+</form>
+</form>
+     <form  action="/ch/m/tv">
+      <button class="btn22">XBOX 360/One</button>
+</form>
+</form>
+     <form  action="/ch/m/tv">
+      <button class="btn23">PS3/4/P</button>
+</form>
+</form>
+     <form  action="/ch/m/tv">
+      <button class="btn24">Wii U/Mini</button>
+</form>
+</form>
+     <form  action="/ch/m/tv">
+      <button class="btn25">Google TV</button>
+</form>
+ <form  action="/ch/m/tv">
+      <button class="btn26">Others</button>
+</form>
+      <form  action="/ch/l/tv">
+      <button class="btn27">Local</button>
+</form>
+ <form  action="/ch/l/tv">
+      <button class="btn28">AllCast</button>
+</form>
+ <form  action="/ch/l/tv">
+      <button class="btn29">Videostream</button>
+</form>
+</form>
+      <form  action="https://owner.roku.com/add/ccloudapp">
+      <button class="btn15">Roku</button>
+</form>
+    <form  action="/chat">
+      <button class="btn10">chat</button>
+</form>
+
+   </div>
+
+<script>
+  function coolal(type, title, text) {
+  //Create the alert
+  var alert = $("body").append(
+    "<div id='coolal' class=" + type + "><h2 class='coolal-title'>" + 
+    title +
+    "</h2><p class='coolal-text'>" +
+    text +
+    "</p></div>"   
+  );
+  
+  var coolal = $("#coolal");
+  
+  //Check what type of alert is being used 
+  if ( type == "alert") {
+    $("#coolal").append(      
+      "<div id='coolal-btnWrapper'><a id='coolal-btn' class='coolal-alert' href='#'>Ok</a></div>"
+    );
+
+    var coolalAlert = $(".coolal-alert");
+
+    coolalAlert.click(function(){
+      coolal.animate({
+        "opacity":"0",
+        "top":"70%" 
+      }, 200);
+
+      setTimeout(function() {
+        coolal.remove();
+      }, 500);
+    });
+  }
+  
+  if ( type == "yes-no" ) {
+    $("#coolal").append(      
+      "<div id='coolal-btnWrapper'><a id='coolal-btn' class='coolal-yes-no coolal-yes' href='https://www.facebook.com/ccloudapp/posts/1592134487692726' target='_blank'>Huh?</a><a id='coolal-btn' class='coolal-yes-no coolal-no' href='#'>Got it:)</a></div>"
+    );
+
+    var yesNo = $(".coolal-yes-no");
+    var yes = $(".coolal-yes");
+    var no = $(".coolal-no");
+
+    no.click(function(){
+      coolal.animate({
+        "opacity":"0",
+        "top":"70%"
+      }, 200);
+
+      setTimeout(function() {
+        coolal.remove();
+      }, 500);
+    });
+  } 
+  
+  //Resize the alert windows to fit the content
+  var titleHeight = $(".coolal-title").innerHeight();
+  var textHeight = $(".coolal-text").innerHeight();
+  var btnWrapperHeight = $("#coolal-btn").height();
+ 
+  if ( type != "" ) {
+    $("#coolal").css("height", titleHeight + textHeight + btnWrapperHeight);
+  } else { 
+    $("#coolal").css("height", titleHeight + textHeight); 
+  }  
+   
+  $("#coolal").animate({
+    "opacity":"1",
+    "top":"0" 
+  }, 200); 
+} 
+
+//////////////////////////////////////////////////
+$(document).ready(function() { 
+  setTimeout(function() {
+    coolal("yes-no"/*Change this value to "alert" or "yes-no"*/, "cCloud Alert!", "New website link:) <br /> ccloudus.github.io");
+  }, 1000)
+});
+
+</script>
+   
+</body>
+</html>
