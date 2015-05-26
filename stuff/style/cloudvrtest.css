@@ -1,4 +1,28 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+ @media only screen and (min-width:350px){ 
+   td {
+   background:#FFFFFF;
+  padding:15x;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:10px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+
+ }
+  @media only screen and (max-width:350px){ 
+   td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+
+ }
 
 body {
   background-color: lightgray;
@@ -112,17 +136,6 @@ tr:last-child td:first-child {
  
 tr:last-child td:last-child {
   border-bottom-right-radius:3px;
-}
- 
-td {
-  background:#FFFFFF;
-  padding:20px;
-  text-align:left;
-  vertical-align:middle;
-  font-weight:300;
-  font-size:18px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #C1C3D1;
 }
 
 td:last-child {
